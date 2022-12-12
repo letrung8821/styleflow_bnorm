@@ -13,7 +13,7 @@ class ToStyleHead(nn.Module):
             nn.Conv2d(input_dim, input_dim, kernel_size=3, stride=1, padding=1, bias=True),
             nn.InstanceNorm2d(input_dim, affine=True),
             nn.PReLU(),
-            nn.AdaptiveAvgPool2d(1),
+            nn.AdaptiveMaxPool2d(1),
             nn.Conv2d(input_dim, output_dim, kernel_size=1)
         )
 
